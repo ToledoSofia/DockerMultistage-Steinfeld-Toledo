@@ -14,7 +14,7 @@ FROM nginx:latest
 COPY --from=builder /app/estilos.min.css /usr/share/nginx/html/estilos.css
 COPY --from=builder /app/script.min.js /usr/share/nginx/html/script.js
 COPY index.html /usr/share/nginx/html/index.html
-COPY default.conf /etc/nginx/conf.d/default.conf
+
 EXPOSE 80
 
 CMD ["nginx", "-g", "daemon off;"]
